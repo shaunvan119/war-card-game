@@ -16,12 +16,9 @@ document.getElementById("draw-cards").addEventListener("click", () => {
         .then(res => res.json())
         .then(data => {
             console.log(data.cards)
-           document.getElementById("cards").innerHTML = `
-           <img src="${data.cards[0].image}"/>
-           `
+            document.getElementById("cards").innerHTML = `
+                <img src=${data.cards[0].image} class="card" />
+                <img src=${data.cards[1].image} class="card" />
+            `
         })
-    
 })
-
-
-
